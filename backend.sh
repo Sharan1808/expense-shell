@@ -16,6 +16,9 @@ unzip /tmp/backend.zip
 cd /app
 npm install
 
+dnf install mysql -y
+mysql -h mysql.spdevops18.online -uroot -pExpenseApp@1 < /app/schema/backend.sql
+
 systemctl daemon-reload
 systemctl enable backend
 systemctl restart backend
