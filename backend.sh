@@ -5,7 +5,7 @@ echo -e "${color} Disable NodeJS default version \e[0m"
 dnf module disable nodejs -y &>>$log_file
 echo $?
 
-echo -e "${color} Enable NodeJS 18 version \e[0m"
+echo -e "${color} Enable NodeJS 18 Version \e[0m"
 dnf module enable nodejs:18 -y &>>$log_file
 echo $?
 
@@ -23,6 +23,10 @@ echo $?
 
 echo -e "${color} Create Application Directory \e[0m"
 mkdir /app &>>$log_file
+echo $?
+
+echo -e "${color} Delete Old Application Content \e[0m"
+rm -rf /app/* &>>$log_file
 echo $?
 
 echo -e "${color} Download Application Content \e[0m"
