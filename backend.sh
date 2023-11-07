@@ -103,7 +103,7 @@ else
 fi
 
 echo -e "${color} Load Schema \e[0m"
-mysql -h mysql.spdevops18.online -uroot -p${MYSQL-MYSQL_ROOT_PASSWORD} < /app/schema/backend.sql &>>$log_file
+mysql -h mysql.spdevops18.online -uroot -p${MYSQL_ROOT_PASSWORD} < /app/schema/backend.sql &>>$log_file
 if [ $? -eq 0 ]; then
   echo -e "\e[32m SUCCESS \e[0m"
 else
