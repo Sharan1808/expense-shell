@@ -1,5 +1,4 @@
-log_file="/tmp/expense.log"
-color="\e[33m"
+source common.sh
 
 if [ -z "$1" ]; then
   echo Password is Missing
